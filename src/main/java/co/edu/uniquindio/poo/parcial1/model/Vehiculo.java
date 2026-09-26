@@ -9,4 +9,30 @@ public class Vehiculo {
     private int anio;
     private String tipo;
     private BigDecimal tarifaDiaria;
+
+    public Vehiculo() {
+    }
+
+    public Vehiculo(String placa, String marca, String modelo, int anio, String tipo,
+                    BigDecimal tarifaDiaria) {
+        this.placa = placa;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anio = anio;
+        this.tipo = tipo;
+        this.tarifaDiaria = tarifaDiaria;
+    }
+
+    public String getPlaca() { return placa; }
+    public void setPlaca(String placa) { this.placa = placa; }
+    public String getMarca() { return marca; }
+    public void setMarca(String marca) { this.marca = marca; }
+    public String getModelo() { return modelo; }
+    public void setModelo(String modelo) { this.modelo = modelo; }
+    public int getAnio() { return anio; }
+    public void setAnio(int anio) { this.anio = anio; }
+    public String getTipo() { return tipo; }
+    public void setTipo(String tipo) { this.tipo = tipo; }
+    public BigDecimal getTarifaDiaria() { return tarifaDiaria; }
+    public void setTarifaDiaria(BigDecimal tarifaDiaria) { this.tarifaDiaria = tarifaDiaria; }
 }
