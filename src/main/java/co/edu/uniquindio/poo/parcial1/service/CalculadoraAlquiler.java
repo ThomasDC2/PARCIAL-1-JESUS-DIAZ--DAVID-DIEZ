@@ -1,6 +1,7 @@
 package co.edu.uniquindio.poo.parcial1.service;
 
 import co.edu.uniquindio.poo.parcial1.model.ModalidadAlquiler;
+import co.edu.uniquindio.poo.parcial1.model.EstadoModalidad;
 import co.edu.uniquindio.poo.parcial1.model.Reserva;
 import co.edu.uniquindio.poo.parcial1.model.ServicioAdicional;
 
@@ -17,6 +18,10 @@ public class CalculadoraAlquiler {
         Objects.requireNonNull(reserva.getFechaInicio(), "La fecha de inicio es obligatoria");
         Objects.requireNonNull(reserva.getFechaFin(), "La fecha de fin es obligatoria");
         Objects.requireNonNull(modalidad.getValorDiario(), "La modalidad debe tener un valor diario");
+
+        if (modalidad.getEstado() != EstadoModalidad.DISPONIBLE) {
+            throw new IllegalArgumentException("La modalidad no está disponible");
+        }
 
         if (reserva.getFechaFin().isBefore(reserva.getFechaInicio())) {
             throw new IllegalArgumentException("La fecha de fin no puede ser anterior a la fecha de inicio");
@@ -37,6 +42,9 @@ public class CalculadoraAlquiler {
         }
 
         if (reserva.getDescuentoAplicado() != null) {
+            if (reserva.getDescuentoAplicado().compareTo(BigDecimal.ZERO) < 0) {
+                throw new IllegalArgumentException("El descuento no puede ser negativo");
+            }
             total = total.subtract(reserva.getDescuentoAplicado());
         }
 

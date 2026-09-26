@@ -1,11 +1,12 @@
 package co.edu.uniquindio.poo.parcial1.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Reserva {
+public class Reserva implements Serializable {
     private String codigo;
     private Cliente cliente;
     private Vehiculo vehiculo;

@@ -1,6 +1,8 @@
 package co.edu.uniquindio.poo.parcial1.model;
 
-public class Empresa {
+import java.io.Serializable;
+
+public class Empresa implements Serializable {
     private String nombreComercial;
     private String nit;
     private String direccion;

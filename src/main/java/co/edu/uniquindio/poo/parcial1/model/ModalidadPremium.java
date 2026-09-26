@@ -40,4 +40,11 @@ public class ModalidadPremium extends ModalidadAlquiler {
             caracteristicasEspeciales.add(caracteristica);
         }
     }
+
+    @Override
+    public ModalidadPremium clonar() {
+        return new ModalidadPremium(getCodigo(), getNombre(), getDescripcion(), getDuracionMinimaDias(),
+                getValorDiario(), getEstado(), getBeneficios(), tipoCobertura,
+                conductoresAdicionalesPermitidos, caracteristicasEspeciales);
+    }
 }

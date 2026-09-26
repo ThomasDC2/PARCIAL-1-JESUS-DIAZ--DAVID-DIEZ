@@ -1,8 +1,9 @@
 package co.edu.uniquindio.poo.parcial1.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Cliente {
+public class Cliente implements Serializable {
     private String nombreCompleto;
     private String documentoIdentidad;
     private String telefono;

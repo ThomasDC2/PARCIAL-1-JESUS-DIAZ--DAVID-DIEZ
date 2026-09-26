@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.poo.parcial1.controller.ReservaController">
+  <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+  <Label text="Gestión de reservas" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+  <GridPane hgap="8" vgap="7">
+    <Label text="Código de reserva" GridPane.rowIndex="0"/><TextField fx:id="codigo" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Documento del cliente" GridPane.rowIndex="1"/><TextField fx:id="documentoCliente" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Placa del vehículo" GridPane.rowIndex="2"/><TextField fx:id="placaVehiculo" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label text="Código de modalidad" GridPane.rowIndex="3"/><TextField fx:id="codigoModalidad" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Label text="Servicios (códigos separados por coma)" GridPane.rowIndex="4"/><TextField fx:id="codigosServicios" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Label text="Fecha inicio" GridPane.rowIndex="5"/><DatePicker fx:id="fechaInicio" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Label text="Fecha fin" GridPane.rowIndex="6"/><DatePicker fx:id="fechaFin" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <Label text="Descuento (valor fijo)" GridPane.rowIndex="7"/><TextField fx:id="descuento" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+  </GridPane>
+  <HBox spacing="8"><Button text="Registrar" onAction="#registrar"/><Button text="Buscar" onAction="#buscar"/>
+    <Button text="Cancelar reserva" onAction="#eliminar"/><Button text="Listar" onAction="#listar"/></HBox>
+  <TextArea fx:id="resultado" editable="false" prefRowCount="5" wrapText="true"/>
+</VBox>

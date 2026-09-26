@@ -1,10 +1,11 @@
 package co.edu.uniquindio.poo.parcial1.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ModalidadAlquiler {
+public class ModalidadAlquiler implements Serializable {
     private String codigo;
     private String nombre;
     private String descripcion;
@@ -57,5 +58,10 @@ public class ModalidadAlquiler {
 
     public void eliminarBeneficio(String beneficio) {
         beneficios.remove(beneficio);
+    }
+
+    public ModalidadAlquiler clonar() {
+        return new ModalidadAlquiler(codigo, nombre, descripcion, duracionMinimaDias,
+                valorDiario, estado, tipo, beneficios);
     }
 }

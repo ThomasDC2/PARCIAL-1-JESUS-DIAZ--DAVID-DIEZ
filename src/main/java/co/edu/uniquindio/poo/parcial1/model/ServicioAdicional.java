@@ -1,8 +1,9 @@
 package co.edu.uniquindio.poo.parcial1.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class ServicioAdicional {
+public class ServicioAdicional implements Serializable {
     private String codigo;
     private String nombre;
     private String descripcion;

@@ -1,8 +1,9 @@
 package co.edu.uniquindio.poo.parcial1.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Vehiculo {
+public class Vehiculo implements Serializable {
     private String placa;
     private String marca;
     private String modelo;

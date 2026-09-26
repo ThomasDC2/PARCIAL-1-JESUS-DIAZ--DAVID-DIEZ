@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane fitToWidth="true" xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.poo.parcial1.controller.ModalidadController">
+  <content><VBox spacing="9"><padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+    <Label text="Gestión de modalidades" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <GridPane hgap="8" vgap="7">
+      <Label text="Código" GridPane.rowIndex="0"/><TextField fx:id="codigo" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+      <Label text="Nombre" GridPane.rowIndex="1"/><TextField fx:id="nombre" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+      <Label text="Descripción" GridPane.rowIndex="2"/><TextField fx:id="descripcion" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+      <Label text="Duración mínima (días)" GridPane.rowIndex="3"/><TextField fx:id="duracionMinima" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+      <Label text="Valor diario" GridPane.rowIndex="4"/><TextField fx:id="valorDiario" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+      <Label text="Estado (DISPONIBLE/SUSPENDIDA/FINALIZADA)" GridPane.rowIndex="5"/><TextField fx:id="estado" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+      <Label text="Tipo (ECONOMICA/EJECUTIVA/PREMIUM)" GridPane.rowIndex="6"/><TextField fx:id="tipo" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+      <Label text="Beneficios (separados por coma)" GridPane.rowIndex="7"/><TextField fx:id="beneficios" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+      <Label text="Cobertura Premium" GridPane.rowIndex="8"/><TextField fx:id="cobertura" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+      <Label text="Conductores adicionales" GridPane.rowIndex="9"/><TextField fx:id="conductores" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+      <Label text="Características Premium (por coma)" GridPane.rowIndex="10"/><TextField fx:id="caracteristicas" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+    </GridPane>
+    <HBox spacing="8"><Button text="Registrar" onAction="#registrar"/><Button text="Buscar" onAction="#buscar"/>
+      <Button text="Actualizar" onAction="#actualizar"/><Button text="Eliminar" onAction="#eliminar"/><Button text="Listar" onAction="#listar"/></HBox>
+    <TextArea fx:id="resultado" editable="false" prefRowCount="5" wrapText="true"/>
+  </VBox></content>
+</ScrollPane>
